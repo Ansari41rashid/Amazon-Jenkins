@@ -19,12 +19,6 @@ pipeline {
                  sh 'mvn clean install'
             }
         }
-         stage('test') {
-            steps {
-                 sh 'mvn test'
-                 }
-         }
-      post{
     
       failure{
        echo 'Failure in the build'
