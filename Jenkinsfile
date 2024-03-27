@@ -1,5 +1,11 @@
 pipeline {
-    agent any
+   agent {
+  label 'Linux-slave1'
+}
+    tools {
+  maven 'mvn'
+  git 'Default'
+}
     stages {
 
         stage('pull') {
