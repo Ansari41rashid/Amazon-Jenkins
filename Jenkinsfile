@@ -1,6 +1,6 @@
 pipeline {
    agent {
-  label 'Linux-slave1'
+  label 'win-slave'
 }
     tools {
   maven 'mvn'
@@ -16,13 +16,13 @@ pipeline {
         
         stage('compile') {
             steps {
-                sh 'mvn compile'
+                bat 'mvn compile'
             }
           }
         
          stage('build') {
             steps {
-                 sh 'mvn clean install'
+               bat 'mvn clean install'
             }
         }
     }
