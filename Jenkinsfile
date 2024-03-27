@@ -25,10 +25,12 @@ pipeline {
                  sh 'mvn clean install'
             }
         }
-    
-      failure{
-       echo 'Failure in the build'
-             }
-
+    }
+    post{
+       failure{
+          echo "Failute in the build"
+       }
+    }
+     
     }  
-  }
+  
