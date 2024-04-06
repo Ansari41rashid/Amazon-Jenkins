@@ -1,6 +1,6 @@
 pipeline {
    agent {
-  label 'win-slave'
+  label 'ssh-node'
 }
     tools {
   maven 'mvn'
